@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATS Resume Evaluator</title>
+</head>
+<body>
+    <h2>ATS Resume Evaluator</h2>
+    <form method="post">
+        <label>Job Description:</label><br>
+        <textarea name="job_desc" rows="5" cols="50"></textarea><br><br>
+
+        <label>Resume Text:</label><br>
+        <textarea name="resume" rows="5" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Evaluate">
+    </form>
+
+    {% if score is not none %}
+        <h3>ATS Score: {{ score }}/10</h3>
+        <h3>Suggestions:</h3>
+        <pre>{{ suggestions }}</pre>
+        <a href="/download">Download Suggestions</a>
+    {% endif %}
+</body>
+</html>
