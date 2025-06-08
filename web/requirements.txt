@@ -2,4 +2,7 @@ Flask
 flask_restful
 pymongo
 bcrypt
-spacy
+python-dotenv
+pymupdf  # install PyMuPDF but import as fitz
+nltk
+openai
